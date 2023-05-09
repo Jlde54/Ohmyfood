@@ -3,6 +3,8 @@
 
     <head>
         <meta charset="UTF-8">
+        <!--Contrôle de la mise en page sur mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>OhMyFood</title>
         <!-- Police Roboto -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +14,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-        <!-- Lien vers accueil.css -->
+        <!-- Lien vers fichier .css -->
         <link rel="stylesheet" href="css/style.css">
         <!-- Kit icônes - Font Awesome -->
         <script src="https://kit.fontawesome.com/3a3b922869.js" crossorigin="anonymous"></script>
@@ -20,87 +22,76 @@
 
     <body>
         <div class="main-container">
-            <header>
-                <div class="entete">
-                    <!-- Logo ohmyfood -->
-                    <div class="image">
-                        <img src="images/logo/ohmyfood.png" alt="Logo OhMyFood">
-                    </div>
-
-                    <!-- Formulaire Location -->
-                    <div class="location">
-                        <form action="#">
-                                <i class="fa-sharp fa-solid fa-location-dot"></i>
-                                <input class="input-location" type="text" name="Location" id="Location" placeholder="Paris, Belleville">
-                        </form>
-                    </div>
+            <!-- Header -->
+            <header class="header">
+                <!-- Logo ohmyfood -->
+                <div class="image-logo-ohmyfood">
+                    <img src="images/logo/ohmyfood.png" alt="Logo OhMyFood">
                 </div>
-                
+                <!-- Formulaire Location -->
+                <div class="location">
+                    <form action="#">
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            <input type="text" name="Location" id="Location" placeholder="Paris, Belleville">
+                    </form>
+                </div>
             </header>
 
             <main>
                 <!-- Partie "Explorer et réserver" -->
                 <div class="explore-reserve">
-                    <h1>Réservez le menu qui vous convient</h1>
-                    <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+                    <p class="font-24px-700">Réservez le menu qui vous convient</p>
+                    <p class="font-18px-300">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
                     <!-- Bouton "Explorez nos restaurants "-->
                     <div class="centre">
-                        <a href="#">
-                            <button class="explorez-button-style" type="button">Explorez nos restaurants</button>
-                        </a>
+                        <button class="explorez-button-style font-16px-500" type="button">Explorez nos restaurants</button>
                     </div>
                 </div>
 
                 <div class="fonctionnement">
-                    <h1>Fonctionnement</h1>
+                    <p class="font-24px-700">Fonctionnement</p>
                     <!-- Boutons "Fonctionnement "-->
                     <div class="fonctionnement-block-button">
                         <div class="fonctionnement-button">
                             <div class="circle">1</div>
-                            <a href="#">
-                                <button class="fonctionnement-button-style" type="button">
-                                    <i class="fa-solid fa-mobile-screen-button"></i>
-                                    <p>Choisissez un restaurant</p>
-                                </button>
-                            </a>
+                            <button class="fonctionnement-button-style" type="button">
+                                <i class="fa-solid fa-mobile-screen-button"></i>
+                                Choisissez un restaurant
+                            </button>
                         </div>
                         <div class="fonctionnement-button">
                             <div class="circle">2</div>
-                            <a href="#">
-                                <button class="fonctionnement-button-style" type="button">
-                                    <i class="fa-solid fa-bars"></i>
-                                    <p>Composez un menu</p>
-                                </button>
-                            </a>
+                            <button class="fonctionnement-button-style" type="button">
+                                <i class="fa-solid fa-bars"></i>
+                                Composez un menu
+                            </button>
                         </div>
                         <div class="fonctionnement-button">
                             <div class="circle">3</div>
-                            <a href="#">
-                                <button class="fonctionnement-button-style" type="button">
-                                    <i class="fa-solid fa-store"></i>
-                                    <p>Dégustez au restaurant</p>
-                                </button>
-                            </a>
+                            <button class="fonctionnement-button-style" type="button">
+                                <i class="fa-solid fa-store"></i>
+                                Dégustez au restaurant
+                            </button>
                         </div>
                     </div>
                 </div>
 
                 <div class="restaurants">
-                    <h1>Restaurants</h1>
+                    <p class="font-24px-700">Restaurants</p>
                     <div class="restaurant-cards">
-                        <a href="#">
+                        <a href="restaurants/lapalettedugout.html">
                             <article class="cards">
                                 <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
                                 <div class="nouveau">Nouveau</div>
                                 <div class="card-content">
                                     <div class="card-txt-title">
-                                        <h2>La palette du goût</h2>
+                                        <p class="font-18px-700">La palette du goût</p>
                                         <button class="card-heart-icone" type="button">
                                             <i class="fa-regular fa-heart"></i>
                                         </button>
                                     </div>
                                     <div class="card-txt">
-                                        <p>Ménilmontant</p>
+                                        <p class="font-17px-300">Ménilmontant</p>
                                     </div>
                                 </div>
                             </article>
@@ -112,7 +103,7 @@
                                 <div class="nouveau">Nouveau</div>
                                 <div class="card-content">
                                     <div class="card-txt-title">
-                                        <h2>La note enchantée</h2>
+                                        <p class="font-18px-700">La note enchantée</p>
                                         <button type="button">
                                             <i class="fa-regular fa-heart"></i>
                                         </button>
@@ -128,7 +119,7 @@
                                 <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Le délice des sens">
                                 <div class="card-content">
                                     <div class="card-txt-title">
-                                        <h2>A la française</h2>
+                                        <p class="font-18px-700">A la française</p>
                                         <button type="button">
                                             <i class="fa-regular fa-heart"></i>
                                         </button>
@@ -145,7 +136,7 @@
                                 <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="La note enchantée">
                                 <div class="card-content">
                                     <div class="card-txt-title">
-                                        <h2>Le délice des sens</h2>
+                                        <p class="font-18px-700">Le délice des sens</p>
                                         <button type="button">
                                             <i class="fa-regular fa-heart"></i>
                                         </button>
@@ -168,17 +159,17 @@
                     <a href="#">
                         <div class="footer-button-style">
                             <i class="fa-solid fa-utensils"></i>
-                            <p>Proposer un restaurant</p>
+                            <p class="font-16px-500">Proposer un restaurant</p>
                         </div>
                     </a>
                     <a href="#">
                         <div class="footer-button-style">
                             <i class="fa-solid fa-handshake-angle"></i>
-                            <p>Devenir partenaire</p>
+                            <p class="font-16px-500">Devenir partenaire</p>
                         </div>
                     </a>
-                    <a href="#"><p>Mentions légales</p></a>
-                    <a href="#"><p>Contact</p></a>
+                    <a href="#"><p class="font-16px-500">Mentions légales</p></a>
+                    <a href="#"><p class="font-16px-500">Contact</p></a>
                 </div>
                 
             </footer>
