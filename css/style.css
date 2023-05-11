@@ -5,6 +5,10 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.font-shrikhand {
+    font-family: 'Shrikhand', cursive;
+}
+
 /*Codes couleurs*/
 :root {
     --green-light-color: #99E2D0;
@@ -35,38 +39,48 @@ body {
 }
 
 /*Headings styles*/
-h1 {
+/*h1 {
     font-size: 28px;
     font-weight: 400;
     padding-top: 30px;
     margin-left: 25px;
     font-family: 'Shrikhand', cursive;
-}
+}*/
 
-h2 {
+/*h2 {
     font-size: 18px;
     font-weight: 700;
     font-family: 'Shrikhand', cursive;
-}
+}*/
 
-h3 {
+/*h3 {
     font-size: 18px;
     font-weight: 500;
     padding-top: 30px;
     margin-left: 25px;
     font-family: 'Shrikhand', cursive;
-}
+}*/
 
-h4 {
+/*h4 {
     font-size: 16px;
     font-weight: 500;
     padding-top: 30px;
     margin-left: 25px;
     font-family: 'Shrikhand', cursive;
-}
+}*/*/
 
 .font-15px-300 {
     font-size: 15px;
+    font-weight: 300;
+}
+
+.font-15px-700 {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.font-16px-300 {
+    font-size: 16px;
     font-weight: 300;
 }
 
@@ -100,6 +114,15 @@ h4 {
     font-weight: 700;
 }
 
+.font-28px-400 {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+/*Images*/
+img {
+    object-fit: cover;
+}
 
 /*Links*/
 a {
@@ -128,6 +151,7 @@ button {
     display: flex;
     flex-direction: column;
 }
+
 /***********************/
 /*Pages web restaurants*/
 /***********************/
@@ -141,48 +165,108 @@ button {
     position: relative;
     display: flex;
     flex-direction: row;
-    justify-content: start;
-    width: 60%;
-    gap: 90px;
+    /*justify-content:space-between;*/
+    justify-content: center;
+    /*width: 60%;*/
+    width: 100%;
+    /*height: 63px;*/
+    /*gap: calc(100% - 100px);*/
+    align-items: center;
+    /*padding: 14px 0px 5px 0px;*/
 }
 
 .arrow-logo i {
-    margin-left: 25px;
-    margin-top: 20px;
+    /*margin-left: 25px;
+    margin-top: 20px;*/
 }
 
-.banner img {
+.arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.banner {
+    background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-size: cover;
     width: 100%;
     height: 275px;
+}
+
+.main-restaurant {
+    background-color: var(--grey-light);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-top: -20px;
 }
 
 .restaurant-name {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
 }
 
-.menu {
+.restaurant-name h1 {
+    margin: 15 px 0px;
+}
+
+.restaurant-name i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+.restaurant-name .card-heart-icone {
+    background-color: var(--grey-mid);
+}
+
+.menus {
     display: flex;
     flex-direction: column;
     padding: 0px 25px;
-    margin-top: 15px;
+    margin-bottom: 35px;
+    gap: 15px;
 }
 
-.menu p {
+/*.menus p {
     margin: 20px 0px;
+}*/
+
+.underline-green {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: var(--green-light-color);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}
+
+.menus h3 {
+    margin: 10px 0px 5px 0px;
+}
+
+.menus p {
+    margin: 0px 0px 10px 0px;
 }
 
 .menu-list {
     display:flex;
     flex-direction: column;
-    margin:20px 0px 0px 0px;
+    /*margin:20px 0px 0px 0px;*/
+    padding: 0px 20px;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     border-radius: 15.0431px;
+    cursor: pointer;
+    background-color: white;
 }
 
-.menu-list p {
-    margin: 5px 0px;
+.menu-list:hover {
+    filter: brightness(150%);
+}
+
+.menu-list:active {
+    filter: brightness(150%);
 }
 
 .title-price {
@@ -192,6 +276,11 @@ button {
     width: 100%;
 }
 
+.main-restaurant .explore-reserve-button {
+    padding-bottom: 40px;
+}
+
+/************************************/
 
 /*-- Logo OhMyFood --*/
 
@@ -204,6 +293,7 @@ button {
 .image-logo-ohmyfood img {
     width: 162px;
     height: 34px;
+    object-fit: contain;
 }
 
 /*-- Fomulaire location --*/
@@ -214,7 +304,7 @@ button {
 
 .location form {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     width: 30%;
     padding: 15px;
     margin: auto;
@@ -235,80 +325,107 @@ button {
     background-color: var(--grey-color);
     border: none;
     white-space: nowrap;
+    margin-left: 15px;
 }
 
+/***************************************/
 /* Partie Explorez et réservez le menu */
+/***************************************/
 
 .explore-reserve {
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-color: var(--grey-light);
-    padding: 20px;
+    padding: 30px 20px;
 }
 
-.explore-reserve p, button {
+.explore-reserve h1, p, button {
     text-align: center;
 }
 
-/*--Bouton "Explorez nos restaurants" --*/
+/*.explore-reserve h1 {
+    padding-top: 10px;
+    margin-left: 25px;
+}*/
 
-.centre {
+/*-- Bouton "Explorez nos restaurants" --*/
+
+/*.centre {
     text-align: center;
-    padding: 15px 0px 40px 0px;
+    padding: 15px 0px 20px 0px;
+}*/
+
+.explore-reserve-button {
+    text-align: center;
+    padding: 25px 0px 20px 0px;
 }
 
-.explorez-button-style {
-    width: 218px;
+.explore-button-style {
+    width: 50%;
+    max-width: 218px;
     height: 50px;
-    background: linear-gradient(93.33deg, var(--violet-color) -11.44%, var(--pink-color) 123.93%);
+    background: linear-gradient(193.33deg, var(--violet-color) -11.44%, var(--pink-color) 123.93%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
     color: white;
+    cursor: pointer;
+    padding: 10px;
 }
 
-.explorez-button-style:active {
+.explore-button-style:hover {
     filter: brightness(150%);
 }
 
+.explore-button-style:active {
+    filter: brightness(150%);
+}
+
+/******************************/
 /* -- Partie Fonctionnement --*/
+/******************************/
 
 .fonctionnement {
     display: flex;
     flex-direction: column;
-    padding: 15px 0px 25px 0px;
+    padding: 25px 10px 40px 10px;
 }
 
-.fonctionnement p {
-    margin-left: 25px;
+.fonctionnement h1 {
+    margin-left: 20px;
 }
 
 .fonctionnement-block-button {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
     align-items: center;
 }
 
 /*-- Boutons "Fonctionnement" --*/
 
 .fonctionnement-button {
+    /*position: relative;*/
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0px 20px;
     width: 85%;
-    position: relative;
 }
 
-.circle {
-    margin:1px;
-    width:20px;
+.fonctionnement-button .circle {
+    /*margin: 1px;*/
+    min-width: 20px;
     background:#9356DC;
     color: white;
-    height:20px;
-    text-align:center;
+    min-height: 20px;
+    text-align: center;
     border-radius:100px;
-    line-height: 19px; /* 20 - 1 */
-    position: absolute;
-    top: 18px;
-    left: -10px;
+    /*line-height: 19px; /* 20 - 1 */
+    /*position: absolute;*/
+    /*top: 18px;*/
+    /*left: -10px;*/
+    margin-left: -20px;
 }
 
 .fonctionnement-button-style {
@@ -316,7 +433,7 @@ button {
     flex-direction: row;
     align-items: center;
     gap: 25px;
-    margin: auto;
+    /*margin: auto;*/
     background-color: var(--grey-mid);
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     border-radius: 20px;
@@ -324,19 +441,34 @@ button {
     font-size: 16px;
     font-weight: 700;
     width: 100%;
-    padding: 18px 0px 18px 25px;
+    padding: 18px 25px;
 }
 
-/*-- Restaurants --*/
+.fonctionnement-button-style:hover {
+    filter: brightness(150%);
+}
+
+.fonctionnement-button-style:active {
+    filter: brightness(150%);
+}
+
+/**************************/
+/*-- Partie Restaurants --*/
+/**************************/
 
 .restaurants {
     background-color: var(--grey-light);
-    padding: 15px 0px 25px 0px;
+    padding: 25px 0px;
 }
 
-.restaurants p {
-    padding-top: 10px;
+.restaurants h1 {
+    /*padding-top: 10px;*/
     margin-left: 25px;
+}
+
+.restaurants .cards {
+    display: flex;
+    flex-direction: column;
 }
 
 /*-- Cards --*/
@@ -352,31 +484,35 @@ button {
 }
 
 .cards img {
-    object-fit: cover;
+    /*object-fit: cover;*/
     width: 100%;
     height: 231px;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
 }
 
-.nouveau {
+.cards .nouveau {
     padding:10px;
     width:61px;
+    height:12px;
     background:var(--green-light-color);
     color: var(--green-dark-color);
-    height:16px;
-    text-align:center;
+    /*text-align:center;*/
     position: absolute;
     top: 15px;
     right: 15px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .card-content {
     display: flex;
     flex-direction: column;
+    margin-top: 15px;
+    gap: 5px;
 }
 
-.card-content p {
+.card-content h2, p {
     margin: 0px;
 }
 
@@ -387,15 +523,19 @@ button {
     justify-content: space-between;
     align-items: center;
     padding-left: 15px;
-    position: relative;
+    /*position: relative;*/
+}
+
+.card-txt-title .card-heart-icone {
+    margin-bottom: -15px;
 }
 
 .card-txt-title i {
-    position: absolute;
+    /*position: absolute;
     top: 15px;
-    right: 10px;
-    font-size: 20px;
-    font-weight: lighter;
+    right: 10px;*/
+    font-size: 30px;
+    /*font-weight: 100;*/
 }
 
 .card-txt-title button {
@@ -403,11 +543,16 @@ button {
 }
 
 .card-txt {
-    display: flex;
+    /*display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start;*/
     padding-left: 15px;
 }
+
+.card-txt p {
+    text-align: left;
+}
+
 
 /*-- Footer --*/
 
@@ -476,9 +621,14 @@ footer {
         height: 34px;
     }
 
+    /* Partie Explorer et réserver */
+    .explore-button-style:hover {
+        filter: brightness(150%);
+    }
+    
     /* Partie fonctionnement */
     .fonctionnement {
-        padding: 0px 30px;
+        padding: 40px 40px;
     }
 
     .fonctionnement-block-button {
@@ -488,16 +638,19 @@ footer {
      }
     
     .fonctionnement-button {
-        width: 30%;
+        /*width: 30%;*/
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-
+        /*justify-content: space-evenly;*/
+    }
+    
+    .fonctionnement-button-style:hover {
+        filter: brightness(150%);
     }
 
     /* Partie restaurants */
     .restaurants {
-        padding: 0px 30px;
+        padding: 40px 40px;
     }
 
     .restaurant-cards {
@@ -527,4 +680,40 @@ footer {
         flex-direction: row;
         gap: 20px;
     }
+
+    
+/***********************/
+/*Pages web restaurants*/
+/***********************/
+
+    .main-restaurant {
+        width: 80%;
+        margin: 0 10%;
+        margin-top: -20px;
+    }
+
+    .restaurant-name {
+        /*display: flex;*/
+        /*flex-direction: row;*/
+        /*justify-content: space-between;*/
+        justify-content: center;
+        align-items: center;
+        padding: 0 25px;
+        gap: 50px;
+    }
+    
+    .restaurant-name h1 {
+        margin: 15 px 0px;
+    }
+    
+    .restaurant-name i {
+        font-size: 25px;
+        cursor: pointer;
+    }
+    
+    
+    .restaurant-name .card-heart-icone {
+        background-color: var(--grey-mid);
+    }
+
 }
