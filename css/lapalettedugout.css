@@ -87,6 +87,18 @@
     margin: 0px 0px 10px 0px;
 }
 
+.menu-list-check {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*padding: 0px 20px;*/
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    border-radius: 15.0431px;
+    cursor: pointer;
+    background-color: white;
+    width: 100%;
+}
+
 .menu-list {
     display:flex;
     flex-direction: column;
@@ -95,6 +107,7 @@
     border-radius: 15.0431px;
     cursor: pointer;
     background-color: white;
+    width: 100%;
 }
 
 .menu-list:hover {
@@ -105,11 +118,26 @@
     filter: brightness(150%);
 }
 
+.menu-list:hover + .check {
+    transform: scaleX(60); /* Valeur finale */
+}
+
 .title-price {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+}
+
+.check {
+    width: 1px;
+    height: 65px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: var(--green-light-color);
+    transform: scaleX(1); /* valeur initiale */
+    transform-origin: right 50%; /* Nouveau point d'ancrage */
+    transition: transform 330ms ease-in-out; /* propriété sur laquelle appliquer la transition:"transform" + durée:"330ms" + accélération-décélération:"ease-in-out" + délai:" " */
 }
 
 .main-restaurant .explore-reserve-button {
