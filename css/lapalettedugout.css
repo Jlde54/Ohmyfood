@@ -1,0 +1,172 @@
+/***********************/
+/*Pages web restaurants*/
+/***********************/
+
+.header-restaurant {
+    display: flex;
+    flex-direction: column;
+}
+
+.arrow-logo {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+
+.arrow {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.banner {
+    background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 275px;
+}
+
+.main-restaurant {
+    background-color: var(--grey-light);
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-top: -20px;
+}
+
+.restaurant-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.restaurant-name h1 {
+    margin: 15 px 0px;
+}
+
+.restaurant-name i {
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
+
+.restaurant-name .card-heart-icone {
+    background-color: var(--grey-mid);
+    position: relative;
+}
+
+.menus {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 25px;
+    margin-bottom: 35px;
+    gap: 15px;
+}
+
+.underline-green {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: var(--green-light-color);
+    text-decoration-thickness: 3px;
+    text-underline-offset: 4px;
+}
+
+.menus h3 {
+    margin: 10px 0px 5px 0px;
+}
+
+.menus p {
+    margin: 0px 0px 10px 0px;
+}
+
+.menu-list {
+    display:flex;
+    flex-direction: column;
+    padding: 0px 20px;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    border-radius: 15.0431px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.menu-list:hover {
+    filter: brightness(150%);
+}
+
+.menu-list:active {
+    filter: brightness(150%);
+}
+
+.title-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.main-restaurant .explore-reserve-button {
+    padding-bottom: 40px;
+}
+
+/****** Media queries ***********/
+
+/****************************************************/
+/* Medium devices (tablets, greater/equal than 768px) */
+/****************************************************/
+
+@media (min-width: 768px) {
+
+    .main-container {
+        width: 100%;
+        max-width: 1024px;
+    }
+
+    .main-restaurant {
+        width: 80%;
+        margin: 0 10%;
+        margin-top: -20px;
+    }
+
+    .restaurant-name {
+        justify-content: center;
+        align-items: center;
+        padding: 0 25px;
+        gap: 50px;
+    }
+
+    .restaurant-name h1 {
+        margin: 15 px 0px;
+    }
+
+    .restaurant-name i {
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+
+    .restaurant-name .card-heart-icone {
+        background-color: var(--grey-mid);
+    }
+}
+/****************************************************/
+/* Medium devices (desktop, greater/equal than 1024px) */
+/****************************************************/
+
+@media (min-width: 1024px) {
+
+    .main-container {
+        max-width: 1440px;
+    }
+
+    /*.main-restaurant {
+        width: 60%;
+        margin: 0 20%;
+        margin-top: -20px;
+    }*/
+}
