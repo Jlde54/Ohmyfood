@@ -21,6 +21,11 @@
     </head>
 
     <body>
+        <!--Loader-->
+        <div class="center-loader">
+            <div class="loader"></div>
+        </div>
+        
         <div class="main-container">
             <!--********-->
             <!-- Header -->
@@ -33,8 +38,8 @@
                 <!-- Formulaire Location -->
                 <div class="location">
                     <form action="#">
-                            <i class="fa-sharp fa-solid fa-location-dot"></i>
-                            <input type="text" name="Location" id="Location" placeholder="Paris, Belleville">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                        <input type="text" name="Location" id="Location" placeholder="Paris, Belleville">
                     </form>
                 </div>
             </header>
@@ -59,24 +64,24 @@
                     <!-- Boutons "Fonctionnement "-->
                     <div class="fonctionnement-block-button">
                         <div class="fonctionnement-button">
-                            <div class="circle">1</div>
                             <button class="fonctionnement-button-style" type="button">
+                                <span class="circle">1</span>
                                 <i class="fa-solid fa-mobile-screen-button"></i>
-                                Choisissez un restaurant
+                                <span class="text-left">Choisissez un restaurant</span>
                             </button>
                         </div>
                         <div class="fonctionnement-button">
-                            <div class="circle">2</div>
                             <button class="fonctionnement-button-style" type="button">
+                                <span class="circle">2</span>
                                 <i class="fa-solid fa-bars"></i>
-                                Composez un menu
+                                <span class="text-left">Composez un menu</span>
                             </button>
                         </div>
                         <div class="fonctionnement-button">
-                            <div class="circle">3</div>
                             <button class="fonctionnement-button-style" type="button">
+                                <span class="circle">3</span>
                                 <i class="fa-solid fa-store"></i>
-                                Dégustez au restaurant
+                                <span class="text-left">Dégustez au restaurant</span>
                             </button>
                         </div>
                     </div>
@@ -87,6 +92,7 @@
                 <div class="restaurants">
                     <h1 class="font-24px-700">Restaurants</h1>
                     <div class="restaurant-cards">
+                        <!-- Restaurant La palette du goût -->
                         <article class="cards">
                             <a href="restaurants/lapalettedugout.html">
                                 <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
@@ -105,7 +111,7 @@
                                 <i class="fa-solid fa-heart fa-xl card-heart-solid-icone"></i>
                             </span>
                         </article>
-                                                
+                        <!-- Restaurant La note enchantée -->                        
                         <article class="cards">
                             <a href="#">
                                 <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="A la française">
@@ -119,14 +125,12 @@
                                     </div>
                                 </div>
                             </a>
-                            <!-- <button class="card-heart-icone" type="button"> -->
                             <span>
                                 <i class="fa-regular fa-heart fa-xl card-heart-regular-icone"></i>
                                 <i class="fa-solid fa-heart fa-xl card-heart-solid-icone"></i>
                             </span>
-                            <!-- </button> -->
                         </article>
-                                                
+                        <!-- Restaurant A la française -->                        
                         <article class="cards">
                             <a href="#">
                                 <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Le délice des sens">
@@ -139,15 +143,12 @@
                                     </div>
                                 </div>
                             </a>
-                            <!-- <button class="card-heart-icone" type="button"> -->
                             <span>
                                 <i class="fa-regular fa-heart fa-xl card-heart-regular-icone"></i>
                                 <i class="fa-solid fa-heart fa-xl card-heart-solid-icone"></i>
                             </span>
-                            <!-- </button> -->
                         </article>
-                        
-
+                        <!-- Restaurant Le délice des sens --> 
                         <article class="cards">
                             <a href="#">
                                 <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="La note enchantée">
@@ -160,12 +161,10 @@
                                     </div>
                                 </div>
                             </a>
-                            <!-- <button class="card-heart-icone" type="button"> -->
                             <span>
                                 <i class="fa-regular fa-heart fa-xl card-heart-regular-icone"></i>
                                 <i class="fa-solid fa-heart fa-xl card-heart-solid-icone"></i>
                             </span>
-                            <!-- </button> -->
                         </article>
                         
                     </div>
