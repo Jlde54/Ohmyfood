@@ -2,6 +2,21 @@
 /*Pages web restaurants*/
 /***********************/
 
+/*Codes couleurs*/
+:root {
+    --green-light-color: #99E2D0;
+    --green-dark-color: #008766;
+    --blue-light-color: #89C8FA;
+    --blue-dark-color : #003A68;
+    --violet-color : #9356DC;
+    --pink-color : #FF79DA;
+    --grey-color : #EAEAEA;
+    --grey-mid : #F7F7F7;
+    --grey-light : #F6F6F6;
+    --bg-grey-light : #D2D2D2;
+    --bg-grey-dark : #353535;
+}
+
 .header-restaurant {
     display: flex;
     flex-direction: column;
@@ -45,7 +60,7 @@
 }
 
 .restaurant-name h1 {
-    margin: 15 px 0px;
+    margin: 15px 0px;
 }
 
 .restaurant-name i {
@@ -60,8 +75,34 @@
     background-color: var(--grey-mid);
     position: relative;
 }
+/***************/
+/* Partie Menus*/
+/***************/
 
-/* Menus*/
+/* Apparition progressives des menus */
+
+.fadein1 {
+    animation: fadein 2s;
+}
+
+.fadein2 {
+    animation: fadein 4s;
+}
+
+.fadein3 {
+    animation: fadein 6s;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+/***************************************/
 
 .menus {
     display: flex;
@@ -91,20 +132,19 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /*padding: 0px 20px;*/
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     border-radius: 15.0431px;
     cursor: pointer;
     background-color: white;
     width: 100%;
+    overflow: hidden; /* cacher se qui dépasse*/
+    position: relative;
 }
 
 .menu-list {
     display:flex;
     flex-direction: column;
     padding: 0px 20px;
-    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    border-radius: 15.0431px;
     cursor: pointer;
     background-color: white;
     width: 100%;
@@ -114,12 +154,8 @@
     filter: brightness(150%);
 }
 
-.menu-list:active {
-    filter: brightness(150%);
-}
-
 .menu-list:hover + .check {
-    transform: scaleX(60); /* Valeur finale */
+    transform:translateX(0px);
 }
 
 .title-price {
@@ -129,15 +165,28 @@
     width: 100%;
 }
 
+.menu-list:hover + .title-price {
+    width: 90%;
+}
+
 .check {
-    width: 1px;
+    width: 70px;
+    text-align: center;
     height: 65px;
-    border-top-right-radius: 25px;
-    border-bottom-right-radius: 25px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
     background-color: var(--green-light-color);
-    transform: scaleX(1); /* valeur initiale */
-    transform-origin: right 50%; /* Nouveau point d'ancrage */
     transition: transform 330ms ease-in-out; /* propriété sur laquelle appliquer la transition:"transform" + durée:"330ms" + accélération-décélération:"ease-in-out" + délai:" " */
+    transform: translateX(70px); /* faire ressortir la boite check*/ 
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+.check i {
+    margin-top: 25px;
+    color: white;
 }
 
 .main-restaurant .explore-reserve-button {
@@ -154,7 +203,6 @@
 
     .main-container {
         width: 100%;
-        max-width: 1024px;
     }
 
     .main-restaurant {
@@ -171,7 +219,7 @@
     }
 
     .restaurant-name h1 {
-        margin: 15 px 0px;
+        margin: 15px 0px;
     }
 
     .restaurant-name i {
@@ -190,13 +238,4 @@
 
 @media (min-width: 1024px) {
 
-    .main-container {
-        max-width: 1440px;
-    }
-
-    /*.main-restaurant {
-        width: 60%;
-        margin: 0 20%;
-        margin-top: -20px;
-    }*/
 }
