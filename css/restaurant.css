@@ -42,6 +42,11 @@
     background-size: cover;
     width: 100%;
     height: 275px;
+    z-index: -1;
+}
+
+.main-container-restaurant {
+    width: 100%;
 }
 
 .main-restaurant {
@@ -60,14 +65,15 @@
 }
 
 .restaurant-name h1 {
-    margin: 15px 0px;
+    margin-top: 40px;
+    margin-bottom:15px;
 }
 
 .restaurant-name i {
     font-size: 25px;
     cursor: pointer;
     position: absolute;
-    top: 2px;
+    top: 0;
     right: 5px;
 }
 
@@ -120,11 +126,20 @@
     text-underline-offset: 4px;
 }
 
-.menus h3 {
+/*.menu-list p {
+    }*/
+
+/*.menu-list {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}*/
+
+.menus p {
     margin: 10px 0px 5px 0px;
 }
 
-.menus p {
+.title-price p {
     margin: 0px 0px 10px 0px;
 }
 
@@ -132,12 +147,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    border-radius: 15.0431px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
     cursor: pointer;
-    background-color: white;
     width: 100%;
-    overflow: hidden; /* cacher se qui dépasse*/
+    overflow: hidden; /* cacher ce qui dépasse*/
     position: relative;
 }
 
@@ -146,15 +160,16 @@
     flex-direction: column;
     padding: 0px 20px;
     cursor: pointer;
-    background-color: white;
     width: 100%;
 }
 
-.menu-list:hover {
-    filter: brightness(150%);
+.menu-list p {
+    margin: 10px 0px 5px 0px;
+    text-align: left;
+    width: calc(100% - 70px);
 }
 
-.menu-list:hover + .check {
+.menu-list-check:hover .check {
     transform:translateX(0px);
 }
 
@@ -163,16 +178,25 @@
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    gap: 10px;
+    transition: width 330ms ease-in-out;
 }
 
-.menu-list:hover + .title-price {
-    width: 90%;
+.title-price .align-right {
+    text-align: right;
+}
+
+.menu-list-check:hover .title-price {
+    width: calc(100% - 70px);
 }
 
 .check {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 70px;
     text-align: center;
-    height: 65px;
+    height: 100%;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: var(--green-light-color);
@@ -181,11 +205,9 @@
     position: absolute;
     right: 0;
     top: 0;
-
 }
 
 .check i {
-    margin-top: 25px;
     color: white;
 }
 
@@ -201,10 +223,6 @@
 
 @media (min-width: 768px) {
 
-    .main-container {
-        width: 100%;
-    }
-
     .main-restaurant {
         width: 80%;
         margin: 0 10%;
@@ -216,10 +234,6 @@
         align-items: center;
         padding: 0 25px;
         gap: 50px;
-    }
-
-    .restaurant-name h1 {
-        margin: 15px 0px;
     }
 
     .restaurant-name i {
