@@ -132,9 +132,9 @@
     text-underline-offset: 4px;
 }
 
-.menus p {
+/*.menus p {
     margin: 10px 0px 5px 0px;
-}
+}*/
 
 .title-price p {
     margin: 0px 0px 10px 0px;
@@ -175,14 +175,16 @@
     flex-direction: column;
     padding: 0px 20px;
     cursor: pointer;
-    width: 100%;
+    /*width: 100%;*/
+    width: calc(100% - 40px);
     transition: width 330ms ease-in-out;
 }
 
 .menu-list p {
     margin: 10px 0px 5px 0px;
     text-align: left;
-    width: calc(100% - 70px);
+    /*width: calc(100% - 70px);*/
+    width: calc(100% - 10px);
 }
 
 .menu-list .ellipse {
@@ -279,7 +281,7 @@
     }
 
     .menus {
-        width: 30%
+        width: 28%;
     }
 
 }
