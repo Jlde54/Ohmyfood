@@ -129,10 +129,10 @@ button {
     align-items: center;*/
     height: 100px;
     opacity: 1;
-    animation: opacity-1-to-0 3s;
-    animation-delay: 2s;
+    animation: opacity-1-to-0 3s 2s 1 forwards;
+    /*animation-delay: 2s;
     animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards;*/
     }
 
 @keyframes opacity-1-to-0 {
@@ -146,7 +146,7 @@ button {
     border-top: 16px solid #34db55;
     width: 120px;
     height: 120px;
-    animation: spin 2s linear infinite;
+    animation: spin 2s linear 2;
   }
 
   .center-loader::after {
@@ -251,10 +251,7 @@ button {
 
 .explore-button-style:hover {
     filter: brightness(150%);
-}
-
-.explore-button-style:active {
-    filter: brightness(150%);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 /******************************/
@@ -322,10 +319,8 @@ button {
 
 .fonctionnement-button-style:hover {
     filter: brightness(150%);
-}
-
-.fonctionnement-button-style:active {
-    filter: brightness(150%);
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 /**************************/
@@ -356,7 +351,6 @@ button {
     margin: 0px 14px 25px 14px;
     position: relative;
     padding-bottom: 20px;
-    position: relative;
 }
 
 .cards img {
@@ -389,9 +383,13 @@ button {
     margin: 0px;
 }
 
+.card-content h2 {
+    width: calc(100% - 60px);
+}
+
 .card-txt-title {
     padding-left: 15px;
-    position: relative;
+    /*position: relative;*/
 }
 
 /* Animation heart */
@@ -563,14 +561,17 @@ footer {
 
 @media (min-width: 1024px) {
 
-    .main-container {
-        /*width: 80%;*/
-        /*max-width: 1440px;*/
-    }
+    /*.main-container {
+        width: 80%;*/
+        /*max-width: 1440px;
+    }*/
 
-    .main-restaurant {
+    /*.main-restaurant {
         width: 60%;
         margin: 0 20%;
         margin-top: -20px;
+    }*/
+    .restaurant-cards {
+        flex-wrap: nowrap;
     }
 }
