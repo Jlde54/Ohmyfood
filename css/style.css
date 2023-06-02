@@ -34,7 +34,6 @@ body {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /*max-width: 768px;*/
     box-sizing: border-box;
     opacity: 0;
     animation: opacity-0-to-1 4s;
@@ -124,15 +123,9 @@ button {
     position: absolute;
     left: calc(50% - 75px);
     top: 45%;
-    /*display: flex;
-    justify-content: center;
-    align-items: center;*/
     height: 100px;
     opacity: 1;
     animation: opacity-1-to-0 3s 2s 1 forwards;
-    /*animation-delay: 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;*/
     }
 
 @keyframes opacity-1-to-0 {
@@ -143,7 +136,7 @@ button {
 .loader {
     border: 16px solid #f3f3f3;
     border-radius: 50%;
-    border-top: 16px solid #34db55;
+    border-top: 16px solid var(--violet-color);
     width: 120px;
     height: 120px;
     animation: spin 2s linear 2;
@@ -266,9 +259,6 @@ button {
 
 .fonctionnement h1 {
     margin-left: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .fonctionnement-block-button {
@@ -389,7 +379,6 @@ button {
 
 .card-txt-title {
     padding-left: 15px;
-    /*position: relative;*/
 }
 
 /* Animation heart */
@@ -480,7 +469,6 @@ footer {
         display: flex;
         flex-direction: column;
         width: 100%;
-        /*max-width: 1024px;*/
         box-sizing: border-box;
     }
         
@@ -497,6 +485,8 @@ footer {
     /* Partie fonctionnement */
     .fonctionnement {
         padding: 40px 40px;
+        max-width: 1200px;
+        margin: auto;
     }
 
     .fonctionnement-block-button {
@@ -522,8 +512,15 @@ footer {
     }
 
     /* Partie restaurants */
+    
+    .bg-restaurants {
+        background-color: var(--grey-light);
+    }
+
     .restaurants {
         padding: 40px 40px;
+        max-width: 1200px;
+        margin: auto;
     }
 
     .restaurant-cards {
@@ -561,16 +558,6 @@ footer {
 
 @media (min-width: 1024px) {
 
-    /*.main-container {
-        width: 80%;*/
-        /*max-width: 1440px;
-    }*/
-
-    /*.main-restaurant {
-        width: 60%;
-        margin: 0 20%;
-        margin-top: -20px;
-    }*/
     .restaurant-cards {
         flex-wrap: nowrap;
     }
