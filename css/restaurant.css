@@ -22,6 +22,8 @@
     flex-direction: column;
 }
 
+/* Flèche retour arrière */
+
 .arrow-logo {
     position: relative;
     display: flex;
@@ -37,6 +39,8 @@
     left: 20px;
 }
 
+/*Bannière fond de page */
+
 .banner {
     background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     background-size: cover;
@@ -44,6 +48,10 @@
     height: 275px;
     z-index: -1;
 }
+
+/**********************/
+/* Partie restaurants */
+/**********************/
 
 .main-container-restaurant {
     width: 100%;
@@ -147,8 +155,8 @@
     overflow: hidden; /* cacher ce qui dépasse*/
     position: relative;
 }
-/***************************/
-/*Hover sur menu-list-check*/
+
+/* Hover sur menu-list-check */
 
 .menu-list-check:hover {
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
@@ -234,6 +242,10 @@
 
 @media (min-width: 768px) {
 
+    /**********************/
+    /* Partie restaurants */
+    /**********************/
+
     .main-restaurant {
         width: 100%;
         margin: 0 auto;;
@@ -263,6 +275,10 @@
 
 @media (min-width: 1024px) {
     
+    /****************/
+    /* Partie menus */
+    /****************/
+
     .all-menus {
         display: flex;
         flex-direction: row;
