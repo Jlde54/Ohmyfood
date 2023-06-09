@@ -222,12 +222,24 @@
     top: 0;
 }
 
+.check-container {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+
 .check i {
-    color: white;
+    color: var(--green-light-color);
+    font-size: 10px;
 }
 
 .main-restaurant .explore-reserve-button {
     padding-bottom: 40px;
+}
+
+.main-restaurant .explore-button-style {
+    width: 186px;
 }
 
 .explore-button-style:hover {

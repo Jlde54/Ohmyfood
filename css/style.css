@@ -235,7 +235,9 @@ button {
 }
 
 .explore-button-style {
-    max-width: 218px;
+    /*max-width: 218px;*/
+    width: 218px;
+    height: 50px;
     background: linear-gradient(193.33deg, var(--violet-color) -11.44%, var(--pink-color) 123.93%);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
     border-radius: 25px;
@@ -310,9 +312,12 @@ button {
 }
 
 .fonctionnement-button-style:hover {
-    filter: brightness(150%);
     cursor: pointer;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.fonctionnement-button-style:hover .fonctionnement-icone-color {
+    color: #9356DC;
 }
 
 /**************************/
@@ -508,10 +513,6 @@ footer {
         text-align: left;
         padding: 18px 15px;
         gap: 15px;
-    }
-
-    .fonctionnement-button-style:hover {
-        filter: brightness(150%);
     }
 
     /* Partie restaurants */
